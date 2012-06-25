@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BitcoinNET
 {
-	public struct GetMiningInfoResponse
+	public class GetMiningInfoResponse
 	{
 		public long blocks;
 		public int currentblocksize;

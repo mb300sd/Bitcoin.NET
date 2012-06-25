@@ -66,9 +66,10 @@ namespace BitcoinNET
 			}
 		}
 
-		public void AddMultiSigAddress(int NRequired, IEnumerable<string> keys, string Account = "")
+		public string AddMultiSigAddress(int NRequired, IEnumerable<string> keys, string Account = "")
 		{
-			throw new NotImplementedException();
+			return RpcCall<string>
+				(new RPCRequest("addmultisigaddress", new Object[] { NRequired, keys, Account }));
 		}
 
 		public void BackupWallet(string Destination)
@@ -107,14 +108,8 @@ namespace BitcoinNET
 				(new RPCRequest("getaddressesbyaccount", new Object[] { Account }));
 		}
 
-		public decimal GetBalance(string Account = null, int MinConf = 1)
+		public decimal GetBalance(string Account = "*", int MinConf = 1)
 		{
-			if (Account == null)
-			{
-				return RpcCall<decimal>
-					(new RPCRequest("getbalance"));
-			}
-
 			return RpcCall<decimal>
 				(new RPCRequest("getbalance", new Object[] { Account, MinConf }));
 		}
@@ -203,9 +198,10 @@ namespace BitcoinNET
 				(new RPCRequest("getreceivedbyaddress", new Object[] { BitcoinAddress, MinConf }));
 		}
 
-		public object GetTransaction(string TxID)
+		public GetTransactionResponse GetTransaction(string TxID)
 		{
-			throw new NotImplementedException();
+			return RpcCall<GetTransactionResponse>
+				(new RPCRequest("gettransaction", new Object[] { TxID }));
 		}
 
 		public GetWorkResponse GetWork()
@@ -263,18 +259,21 @@ namespace BitcoinNET
 				(new RPCRequest("listreceivedbyaddress", new Object[] { MinConf, IncludeEmpty }));
 		}
 
-		public Object ListSinceBlock()
+		public ListSinceBlockResponse ListSinceBlock(string BlockHash = null, int TargetConfirmations = 1)
 		{
-			throw new NotImplementedException();
-		}
-		
-		public Object ListTransactions(string Account = null, int a_count = 10)
-		{
-			if (Account == null)
+			if (BlockHash == null)
 			{
-				throw new NotImplementedException();
+				return RpcCall<ListSinceBlockResponse>
+					(new RPCRequest("listsinceblock"));
 			}
-			throw new NotImplementedException();
+			return RpcCall<ListSinceBlockResponse>
+				(new RPCRequest("listsinceblock", new Object[] { BlockHash, TargetConfirmations }));
+		}
+
+		public IEnumerable<ListTransactionsResponse> ListTransactions(string Account = "*", int Count = 10, int From = 0)
+		{
+			return RpcCall<IEnumerable<ListTransactionsResponse>>
+				(new RPCRequest("listtransactions", new Object[] { Account, Count, From }));	
 		}
 
 		public bool Move(string FromAccount, string ToAccount, decimal Amount, int MinConf = 1, string Comment = "")

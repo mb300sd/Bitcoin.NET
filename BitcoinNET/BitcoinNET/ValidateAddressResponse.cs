@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BitcoinNET
 {
-	public struct ValidateAddressResponse
+	public class ValidateAddressResponse
 	{
 		public bool isvalid;
 		public string address;

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BitcoinNET
 {
-	public struct GetBlockResponse
+	public class GetBlockResponse
 	{
 		public string hash;
 		public long confirmations;

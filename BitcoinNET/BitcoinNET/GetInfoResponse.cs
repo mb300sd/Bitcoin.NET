@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BitcoinNET
 {
-	public struct GetInfoResponse
+	public class GetInfoResponse
 	{
 		public int version;
 		public int protocolversion;

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BitcoinNET
 {
-	public struct ListReceivedByAddressResponse
+	public class ListReceivedByAddressResponse
 	{
 		public string address;
 		public string account;

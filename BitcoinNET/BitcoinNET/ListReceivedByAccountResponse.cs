@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BitcoinNET
 {
-	public struct ListReceivedByAccountResponse
+	public class ListReceivedByAccountResponse
 	{
 		public string account;
 		public decimal amount;

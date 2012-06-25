@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BitcoinNET
 {
-	public struct GetWorkResponse
+	public class GetWorkResponse
 	{
 		[Obsolete]
 		public string midstate;

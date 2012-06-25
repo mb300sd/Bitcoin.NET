@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BitcoinNET
 {
-	public struct ListAddressGroupingsResponse
+	public class ListAddressGroupingsResponse
 	{
 		public string address;
 		public decimal balance;

@@ -12,9 +12,9 @@ namespace BitcoinNET
 	{
 		static void Main(string[] args)
 		{
-			BitcoinRPC b = new BitcoinRPC(new Uri("http://10.0.0.262:8332"), new NetworkCredential("rpcuser1", "rpcpass1"));
+			BitcoinRPC b = new BitcoinRPC(new Uri("http://10.1.1.224:8332"), new NetworkCredential("rpcuser1", "rpcpass1"));
 
-			var r = b.ListReceivedByAddress();
+			var r = b.ListAddressGroupings();
 
 			Console.WriteLine(r);
 

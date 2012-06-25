@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BitcoinNET
 {
-	public struct GetMemoryPoolResponse
+	public class GetMemoryPoolResponse
 	{
 		public int version;
 		public string previousblockhash;
