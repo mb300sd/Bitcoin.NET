@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A73ACEF-3A26-40C2-97B1-93B73407105A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BitcoinNET.RPCClient</RootNamespace>
+    <AssemblyName>BitcoinNET.RPCClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BatchRPC.cs" />
+    <Compile Include="BatchRPC.Methods.cs" />
+    <Compile Include="BitcoinRPC.cs" />
+    <Compile Include="BitcoinRPC.Methods.cs" />
+    <Compile Include="BitcoinRPCException.cs" />
+    <Compile Include="ResponseClasses\CreateMultiSigResponse.cs" />
+    <Compile Include="ResponseClasses\GetTxOutResponse.cs" />
+    <Compile Include="ResponseClasses\DecodeRawTransactionResponse.cs" />
+    <Compile Include="ResponseClasses\GetAddedNodeInfoResponse.cs" />
+    <Compile Include="ResponseClasses\GetPeerInfoResponse.cs" />
+    <Compile Include="ResponseClasses\GetRawTransactionResponse.cs" />
+    <Compile Include="ResponseClasses\GetTransactionResponse.cs" />
+    <Compile Include="ResponseClasses\GetTxOutSetInfoResponse.cs" />
+    <Compile Include="ResponseClasses\ListAddressGroupingsResponse.cs" />
+    <Compile Include="ResponseClasses\ListReceivedByAddressResponse.cs" />
+    <Compile Include="ResponseClasses\GetBlockResponse.cs" />
+    <Compile Include="ResponseClasses\GetMiningInfoResponse.cs" />
+    <Compile Include="ResponseClasses\GetInfoResponse.cs" />
+    <Compile Include="ResponseClasses\GetWorkResponse.cs" />
+    <Compile Include="ResponseClasses\ListReceivedByAccountResponse.cs" />
+    <Compile Include="ResponseClasses\ListSinceBlockResponse.cs" />
+    <Compile Include="ResponseClasses\ListTransactionsResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPCError.cs" />
+    <Compile Include="RPCRequest.cs" />
+    <Compile Include="RPCResponse.cs" />
+    <Compile Include="Test.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ResponseClasses\ValidateAddressResponse.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
