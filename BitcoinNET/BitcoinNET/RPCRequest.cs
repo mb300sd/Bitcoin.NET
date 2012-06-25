@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace BitcoinNET
+namespace BitcoinNET.RPCClient
 {
 	[JsonObject(MemberSerialization=MemberSerialization.Fields)]
 	public class RPCRequest

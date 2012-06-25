@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BitcoinNET
+namespace BitcoinNET.RPCClient
 {
 	public class GetWorkResponse
 	{

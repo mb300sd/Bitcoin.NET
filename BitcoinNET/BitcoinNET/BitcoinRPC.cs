@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace BitcoinNET
+namespace BitcoinNET.RPCClient
 {
 	public class BitcoinRPC
 	{
