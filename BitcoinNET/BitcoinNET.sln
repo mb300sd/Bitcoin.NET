@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinNET", "BitcoinNET\BitcoinNET.csproj", "{2A73ACEF-3A26-40C2-97B1-93B73407105A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPCClient", "RPCClient\RPCClient.csproj", "{2A73ACEF-3A26-40C2-97B1-93B73407105A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
