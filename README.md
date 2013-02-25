@@ -5,9 +5,9 @@ C# Bitcoin RPC Library
 
 
 GPLed, I guess. Don't care too much, however donations are appreciated.
-1juKCCnkJkz5SyiQVKmAKB7dv1vdgynst
+1D7FJWRzeKa4SLmTznd3JpeNU13L1ErEco
 
 
-GetAddressGroupings requires patch here in addition to the Coin Control branch
-https://github.com/bitcoin/bitcoin/pull/1359/files#r1039831
-Hopefully it gets merged.
+ListAddressGroupings requires pull, can't parse output without it.
+https://github.com/bitcoin/bitcoin/pull/2291
+
